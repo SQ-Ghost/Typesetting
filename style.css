@@ -43,3 +43,70 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+  /*Fonts for my body and headers found via google fonts*/
+
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+  .graduate-regular {
+    font-family: "Graduate", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .pt-serif-bold-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  body{
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.02rem;
+    word-spacing: 0.05rem;
+  }
+
+  h2{
+    font-family: 'Graduate', system-ui;
+    font-weight: 400;
+    font-size: 2.4rem;
+    letter-spacing: 0.06rem;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-family: 'Graduate', system-ui;
+    font-size: 3.2;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.08rem;
+  }
+
+  section h2 + p {
+    text-indent: 1.25rem;
+  }
