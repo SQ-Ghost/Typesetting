@@ -136,8 +136,8 @@ a:active{
   background-color: #f2f2f2;
 }
 
-a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/"])::after{
-  content: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png');
+a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/#"])::after{
+  content: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png?raw=true');
   margin-left:5px;
   vertical-align:middle;
 }
