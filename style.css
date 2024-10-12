@@ -110,3 +110,34 @@
   section h2 + p {
     text-indent: 1.25rem;
   }
+
+  a:link{
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+
+  a:visited{
+    color: #944;
+  }
+
+  a:hover{
+    color: #c77;
+    text-decoration: none;
+  }
+
+  a:focus{
+    color: rgb(145, 29, 29);
+    text-decoration: none;
+    outline: none;
+  }
+
+a:active{
+  color: #b536d4;
+  background-color: #f2f2f2;
+}
+
+a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/"])::after{
+  content: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png');
+  margin-left:5px;
+  vertical-align:middle;
+}
