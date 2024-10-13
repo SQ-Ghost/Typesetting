@@ -77,7 +77,15 @@
     font-weight: 700;
     font-style: italic;
   }
-  
+
+  /*Added some color to the header and footer sections*/
+  header, footer{
+    background: linear-gradient(to right, #a66, #d88);
+    padding: 20px;
+    color: white;
+  }
+
+  /*Assigned font to basic text, and spacing*/
   body{
     font-family: 'PT Serif', serif;
     font-weight: 400;
@@ -87,11 +95,13 @@
     word-spacing: 0.06rem;
   }
 
+  /*added space above and below basic text*/
   p{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
+  /*Assigned font and font size to h2 and spaced letters*/
   h2{
     font-family: 'Graduate', system-ui;
     font-weight: 700;
@@ -99,10 +109,12 @@
     letter-spacing: 0.06rem;
   }
 
+  /*general font size for all html elements*/
   html {
     font-size: 10px;
   }
 
+  /*Applied font to h1 & h2, centered & spaced words/elements*/
   header h1 {
     font-family: 'Graduate', system-ui;
     font-size: 3.2;
@@ -112,59 +124,73 @@
     letter-spacing: 0.08rem;
   }
 
+  /*adds some more space at the bottom of the page*/
+  section{
+    margin-bottom: 3rem;
+  }
+
+  /*indented text after each h2 element*/
   section h2 + p {
     text-indent: 1.25rem;
   }
 
+  /*changed default link color to green w/ underline*/
   a:link{
     color: #4CAF50;
     text-decoration: underline;
   }
 
+  /*visited link color changed to dark coral*/
   a:visited{
     color: #944;
   }
 
+  /*while hovering link color light coral, no underline*/
   a:hover{
     color: #c77;
     text-decoration: none;
   }
 
+  /*focus changed to dark red, no underline/outline*/
   a:focus{
     color: rgb(145, 29, 29);
     text-decoration: none;
     outline: none;
   }
 
-a:active{
-  color: #b536d4;
-  background-color: #f2f2f2;
-}
+  /*active transition color changed to purple with slight background color*/
+  a:active{
+    color: #b536d4;
+    background-color: #f2f2f2;
+  }
 
-a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/#"])::after{
-  content: ' ';
-  margin-left:5px;
-  vertical-align:middle;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png?raw=true');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  /*adds png image to external links, excluding my published github site*/
+  a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/#"])::after{
+    content: ' ';
+    margin-left:5px;
+    vertical-align:middle;
+    display: inline-block;
+    width: 16px;
+    height: 16px; /*needed to add image as background image, under content was way too big*/
+    background-image: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png?raw=true');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
-ul, ol{
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  list-style-type: none;
-}
+  /*targets lists making them have same line height as paragraph text*/
+  ul, ol{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: none;
+  }
 
-li{
+  li{
   line-height: 1.5;
-}
+  }
 
-ul li::before{
+  /*adds unique purple bullet triangle before list elements*/
+  ul li::before{
   content: '';
   display:inline-block;
   width: 0;
@@ -174,5 +200,55 @@ ul li::before{
   border-bottom: 0.7rem solid #800080;
   margin-right:0.5rem;
   vertical-align: middle;
-}
+  }
 
+  /*removes the default bullet elements from nav list*/
+  nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*removes the triangle bullets*/
+  nav ul li::before{
+    content: none;
+  }
+
+  /*adds space between the nav buttons*/
+  nav ul li {
+    margin-bottom: 1rem; 
+  }
+
+  /*Styles the links to look like buttons*/
+  nav ul li a{
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color:#a66;
+    border: 5px solid #a66;
+    border-radius: 5px;
+    text-decoration: none !important; /*removes the underline from links*/
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /*adds shading to buttons*/
+  }
+
+  /*changes the button color and inverts the text color while hovering*/
+  nav ul li a:hover, nav ul li a:focus{
+    background-color:#a66;
+    color:#fff;
+    text-decoration: none !important;
+    transform: scale(1.05); /*adds a bit of zoom and transition between colors while hovering*/
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /*shadow gets darker while hovering*/
+  }
+
+  /*got idea from midterm example, makes responsive design for smaller screens */
+  @media(max-width:600px){
+    nav ul li a{
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
