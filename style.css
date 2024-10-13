@@ -83,13 +83,18 @@
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
-    letter-spacing: 0.02rem;
-    word-spacing: 0.05rem;
+    letter-spacing: 0.03rem;
+    word-spacing: 0.06rem;
+  }
+
+  p{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   h2{
     font-family: 'Graduate', system-ui;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2.4rem;
     letter-spacing: 0.06rem;
   }
@@ -101,7 +106,7 @@
   header h1 {
     font-family: 'Graduate', system-ui;
     font-size: 3.2;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     margin: 0 auto;
     letter-spacing: 0.08rem;
@@ -137,7 +142,37 @@ a:active{
 }
 
 a[href^="https"]:not([href*="https://sq-ghost.github.io/Typesetting/#"])::after{
-  content: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png?raw=true');
+  content: ' ';
   margin-left:5px;
   vertical-align:middle;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://github.com/SQ-Ghost/Typesetting/blob/main/external-link-52.png?raw=true');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+ul, ol{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+li{
+  line-height: 1.5;
+}
+
+ul li::before{
+  content: '';
+  display:inline-block;
+  width: 0;
+  height: 0;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  border-bottom: 0.7rem solid #800080;
+  margin-right:0.5rem;
+  vertical-align: middle;
+}
+
